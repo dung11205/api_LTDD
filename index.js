@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 
 // Kết nối MongoDB
-mongoose.connect('mongodb+srv://dung:dung123@dung.dhy4z.mongodb.net/?retryWrites=true&w=majority&appName=dung', {
+mongoose.connect('mongodb+srv://dung:dung1234@dung.dhy4z.mongodb.net/?retryWrites=true&w=majority&appName=dung', {
 
 
 }).then(() => {
@@ -20,9 +20,9 @@ app.use(cors());
 app.use(express.json()); // Thêm middleware để parse JSON requests
 
 // Định nghĩa route cho các API
-const tripRoute = require('./api/routes/trip.route');
-const addressRoute = require('./api/routes/address.route');
-const userRoute = require('./api/routes/users.route');
+const tripRoute = require('./routes/trip.route');
+const addressRoute = require('./routes/address.route');
+const userRoute = require('./routes/users.route');
 
 app.use('/user', userRoute);
 app.use('/address', addressRoute);
